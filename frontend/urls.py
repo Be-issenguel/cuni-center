@@ -1,6 +1,8 @@
 from django.urls import path
-from .views import library_index
+from . import views
 
 urlpatterns = [
-    path('', library_index, name='home'),
+    path('', views.store, name='store'),
+    path('cart/', views.cart, name='cart'),
+    path('checkout/', views.checkout, name='checkout'),
 ]
